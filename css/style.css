@@ -1,8 +1,43 @@
-html {
+* {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.all-images {
+  display: flex;
+  flex-direction: column;
+}
+
+.all-images img {
+  height: 20vh;
+  width: 200px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.preview-image {
   height: 100vh;
+}
+
+.current-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.animate-images {
+  opacity: 0.5;
+  animation: animate-images 0.4s ease-in-out forwards;
+}
+
+@keyframes animate-images {
+  100% {
+    opacity: 1;
+  }
 }
